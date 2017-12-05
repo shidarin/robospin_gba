@@ -1,13 +1,47 @@
 //
-// Attract-Mode Front-End - "Robospin Lynx" layout
+// Attract-Mode Front-End - "Robospin Game Boy Advance" layout
 //
+// Based off the "Robospin" layout by omegaman, verion and raygun
+// http://forum.attractmode.org/index.php?topic=198.0
+// Nintendo Game Boy Color version by Sean 'shidarin' Wallitsch
+// https://github.com/shidarin/robospin_gba
+//
+// The MIT License (MIT)
+// 
+// Copyright (c) 2017 omegaman, verion, raygun, Sean Wallitsch
+// 
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+// 
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+// 
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+// THE SOFTWARE.
+
 class UserConfig {
-   </ label="SpinWheel", help="The artwork to spin", options="marquee,flyer,wheel" />
-   orbit_art="wheel";
-   </ label="Bloom Effect", help="Enable Bloom Effect (requires shader support)", options="Yes,No" />
-   enable_bloom="Yes";
-   </ label="Mask", help="Make background darker.", options="Yes,No" /> enable_Mask="Yes";
-   </ label="Transition Time", help="Time in milliseconds for wheel spin." /> transition_ms="25";
+	</
+		label="SpinWheel",
+		help="The artwork to spin",
+		options="marquee,flyer,wheel" 
+	/> orbit_art="wheel";
+	</ label="Mask",
+		help="Make background darker.",
+		options="Yes,No"
+	/> enable_Mask="Yes";
+	</ 
+		label="Transition Time",
+		help="Time in milliseconds for wheel spin." 
+	/> transition_ms="25";
 }
 
 local my_config = fe.get_config();
@@ -19,11 +53,7 @@ local flx = fe.layout.width;
 local fly = fe.layout.height;
 local flw = fe.layout.width;
 local flh = fe.layout.height;
-//fe.layout.font="Roboto-Bold";
 fe.add_image( "bkg.png", 0, 0, flw, flh );
-
-// Image shadow/outline thickness
-local offset = 4;
 
 //Image of overlay guide with green for help positioning the artwork
 //fe.add_image( "overlay_guide.png", 0, 0, flw, flh );
@@ -35,7 +65,6 @@ local box = fe.add_artwork( "flyer", flx*0.05, fly*0.65, 300, 300 );
 //cart art
 local cart = fe.add_artwork( "cart", flx*0.417, fly*0.65, 460, 269 );
 cart.rotation = 11.37;
-//cart.alpha = 200;
 
 //video
 local snap = fe.add_artwork( "snap", flx*0.1552, fly*0.325, 240*1.93, 160*1.94 );
@@ -53,24 +82,44 @@ fe.add_image( "screen_overlay.png", 0, 0, flw, flh );
 
 //mask
 if ( my_config["enable_Mask"] == "Yes" )
-
 {
-
-local mask = fe.add_image( "mask.png", 0, 0, flw, flx );
-
+	local mask = fe.add_image( "mask.png", 0, 0, flw, flx );
 }
 
 
 //wheel settings
 fe.load_module( "conveyor" );
 
-local wheel_x = [ flx*0.80, flx*0.795, flx*0.756, flx*0.725, flx*0.70, flx*0.68, flx*0.5, flx*0.68, flx*0.70, flx*0.725, flx*0.756, flx*0.76, ]; 
-local wheel_y = [ -fly*0.22, -fly*0.105, fly*0.0, fly*0.105, fly*0.215, fly*0.325, fly*0.4, fly*0.61, fly*0.72 fly*0.83, fly*0.935, fly*0.99, ];
-local wheel_w = [ flw*0.18, flw*0.18, flw*0.18, flw*0.18, flw*0.18, flw*0.18, flw*0.35, flw*0.18, flw*0.18, flw*0.18, flw*0.18, flw*0.18, ];
-local wheel_a = [  80,  80,  80,  80,  80,  80, 255,  80,  80,  80,  80,  80, ];
-local wheel_h = [  flh*0.11,  flh*0.11,  flh*0.11,  flh*0.11,  flh*0.11,  flh*0.11, flh*0.196875,  flh*0.11,  flh*0.11,  flh*0.11,  flh*0.11,  flh*0.11, ];
-//local wheel_r = [  31,  26,  21,  16,  11,   6,   0, -11, -16, -21, -26, -31, ];
-local wheel_r = [  30,  25,  20,  15,  10,   5,   0, -10, -15, -20, -25, -30, ];
+local wheel_x = [
+	flx*0.80, flx*0.795, flx*0.756, flx*0.725, flx*0.70, flx*0.68,
+	flx*0.5,
+	flx*0.68, flx*0.70, flx*0.725, flx*0.756, flx*0.76,
+]; 
+local wheel_y = [
+	-fly*0.22, -fly*0.105, fly*0.0, fly*0.105, fly*0.215, fly*0.325,
+	fly*0.4,
+	fly*0.61, fly*0.72 fly*0.83, fly*0.935, fly*0.99,
+];
+local wheel_w = [
+	flw*0.18, flw*0.18, flw*0.18, flw*0.18, flw*0.18, flw*0.18,
+	flw*0.35,
+	flw*0.18, flw*0.18, flw*0.18, flw*0.18, flw*0.18,
+];
+local wheel_a = [
+	80, 80, 80, 80, 80, 80,
+	255,
+	80, 80, 80, 80, 80,
+];
+local wheel_h = [
+	flh*0.11, flh*0.11, flh*0.11, flh*0.11, flh*0.11, flh*0.11,
+	flh*0.196875,
+	flh*0.11, flh*0.11, flh*0.11, flh*0.11, flh*0.11,
+];
+local wheel_r = [
+	30, 25, 20, 15, 10, 5, 
+	0,
+	-10, -15, -20, -25, -30,
+];
 local num_arts = 10;
 
 class WheelEntry extends ConveyorSlot
@@ -120,11 +169,6 @@ try { conveyor.transition_ms = my_config["transition_ms"].tointeger(); } catch (
 local message = fe.add_text("Launching...",0,300,fe.layout.width,80);
 message.alpha = 0;
 message.style = Style.Bold;
-
-// Gives us a nice high random number for the RGB levels
-function brightrand() {
- return 255-(rand()/255);
-}
 
 local red = 255;
 local green = 255;
@@ -190,4 +234,3 @@ function fancy_transitions( ttype, var, ttime ) {
  }
  return false;
 }
-
