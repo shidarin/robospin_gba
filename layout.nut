@@ -12,16 +12,6 @@ class UserConfig {
 
 local my_config = fe.get_config();
 local no_shader = fe.add_shader( Shader.Empty );
-local yes_shader;
-if ( my_config["enable_bloom"] == "Yes" )
-{
-   yes_shader = fe.add_shader( Shader.Fragment, "bloom_shader.frag" );
-  yes_shader.set_texture_param("bgl_RenderedTexture");
-}
-else
-{
-   yes_shader = no_shader;
-}
 
 fe.layout.width=1920;
 fe.layout.height=1080;
