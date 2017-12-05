@@ -19,7 +19,7 @@ as well as showing flyer and cart art.
 [![Theme Preview](preview.png?raw=true)](preview.png?raw=true)
 
 [Original photography](https://www.flickr.com/photos/donthomaso84/8411219915/in/photostream/) 
-for this theme is by [Thomas Ohlsson Photography](https://www.flickr.com/photos/donthomaso84/8411219915/in/photostream/). 
+for this theme is by [Thomas Ohlsson Photography](https://www.flickr.com/photos/donthomaso84). 
 Retrieved via CC-BY-NC license on December 4th, 2017. Modifications have been 
 made to the original work.
 
@@ -64,7 +64,7 @@ Initial release.
 License
 -------
 
-Code:
+	Code:
 
 	The MIT License (MIT)
 
