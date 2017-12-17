@@ -3,7 +3,7 @@
 //
 // Based off the "Robospin" layout by omegaman, verion and raygun
 // http://forum.attractmode.org/index.php?topic=198.0
-// Nintendo Game Boy Color version by Sean 'shidarin' Wallitsch
+// Nintendo Game Boy Advance version by Sean 'shidarin' Wallitsch
 // https://github.com/shidarin/robospin_gba
 //
 // The MIT License (MIT)

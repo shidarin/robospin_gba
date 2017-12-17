@@ -4,7 +4,7 @@ Robospin GBA
 
 - **Author/Maintainer:** Sean Wallitsch
 - **Email:** shidarin@alphamatte.com
-- **License:** MIT, CC-BY-NC-SA
+- **License:** MIT, CC-BY-NC
 - **Status:** Development
 - **Version:** 1.0
 - **GitHub:** https://github.com/shidarin/robospin_gba
@@ -12,7 +12,8 @@ Robospin GBA
 Introduction
 ------------
 
-A robospin fork customized for Nintendo Game Boy Advance games.
+[Attract-Mode](http://attractmode.org/about.html) emulator layout based on the
+classic robospin theme. Customized for Nintendo Game Boy Advance games.
 Classic wheel design showcases snaps or videos in the Game Boy Advance's screen,
 as well as showing flyer and cart art.
 
@@ -98,8 +99,8 @@ License
 	Distributed under a CC-BY-NC License on December 4th, 2017.
 	Modifications have been made.
 
-	Images present in this package are distributed under a CC-BY-NC-SA license
+	Images present in this package are distributed under a CC-BY-NC license
 	Note that this is a more restrictive license than the MIT license, and only
 	applies to the images.
-	http://creativecommons.org/licenses/by-nc-sa/4.0/
-	http://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+	http://creativecommons.org/licenses/by-nc/4.0/
+	http://creativecommons.org/licenses/by-nc/4.0/legalcode
